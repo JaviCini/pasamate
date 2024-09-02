@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XD INTENTO 200 </title>
+</head>
+<body>
+  <h1>Holaaa, que onda!! XD BUENO CONTINUEMOS...</h1>
+  <form>
+    <input type="radio" id="si" name="response" value="si">
+    <label for="si">Si</label>
+    <input type="radio" id="no" name="response" value="no">
+    <label for="no">No</label>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="response-container"></div>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const response = document.querySelector('input[name="response"]:checked').value;
+      if (response === "no") {
+        document.getElementById("response-container").innerHTML = "gracias por entrar =D";
+      } else {
+        const nameInput = prompt("quien eres?");
+        localStorage.setItem('userName', nameInput); // store the user's name in local storage
+        document.getElementById("response-container").innerHTML = `¡Hola, ${nameInput}!`;
+        console.log("Tu nombre es: " + nameInput); // Solo se muestra en la consola del navegador
+        const mateForm = `
+          <form>
+            <p>mejor.... PASAS MATE PLIS =D</p>
+            <input type="radio" id="si-mate" name="mate" value="si">
+            <label for="si-mate">Si</label>
+            <input type="radio" id="no-mate" name="mate" value="no">
+            <label for="no-mate">No</label>
+            <button type="submit">Enviar</button>
+          </form>
+        `;
+        document.getElementById("response-container").innerHTML += mateForm;
+        const mateFormElement = document.querySelector('form:last-child');
+        mateFormElement.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const mateResponse = document.querySelector('input[name="mate"]:checked').value;
+          if (mateResponse === "no") {
+            document.getElementById("response-container").innerHTML += "<br>IGUAL NI QUERIA XD .....";
+          } else {
+            document.getElementById("response-container").innerHTML += "<br>NAAAA MENTIRA SOLO ERA PARA ENTRETENERTE ";
+            const response3Form = `
+              <form>
+                <p>te caigo bien =D</p>
+                <input type="radio" id="si-response3" name="response3" value="si">
+                <label for="si-response3">Si</label>
+                <input type="radio" id="no-response3" name="response3" value="no">
+                <label for="no-response3">No</label>
+                <button type="submit">Enviar</button>
+              </form>
+            `;
+            document.getElementById("response-container").innerHTML += response3Form;
+            const response3FormElement = document.querySelector('form:last-child');
+            response3FormElement.addEventListener('submit', (e) => {
+              e.preventDefault();
+              const response3 = document.querySelector('input[name="response3"]:checked').value;
+              if (response3 === "si") {
+                document.getElementById("response-container").innerHTML += "<br>QUE MALO QUE NO VEO TU MENSAJE D:....BYE";
+              } else {
+                document.getElementById("response-container").innerHTML += "<br>ajajaj.....que bueno que no puedo ver tus respuestas...BYE";
+              }
+            });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

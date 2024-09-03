@@ -26,16 +26,36 @@
     .cloud-right {
       right: 10%;
     }
+    .animated-button {
+      background-color: #4CAF50;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .animated-button:hover {
+      background-color: #3e8e41;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .animated-button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
   </style>
 </head>
 <body>
   <h1 style="font-size: 36px;">¡𝐻𝑜𝑙𝑎𝑎𝑎! ¿𝑄𝑢𝑒́ 𝑡𝑎𝑙 𝑣𝑎 𝑡𝑜𝑑𝑜? 𝐵𝑢𝑒𝑛𝑜, 𝑠𝑒𝑔𝑢𝑖𝑚𝑜𝑠 𝑎𝑑𝑒𝑙𝑎𝑛𝑡𝑒...</h1>
   <form>
     <input type="radio" id="si" name="response" value="si">
-    <label for="si">Si</label>
+    <label for="si">
+      <button class="animated-button">¡SÍ!</button>
+    </label>
     <input type="radio" id="no" name="response" value="no">
-    <label for="no">No</label>
-    <button type="submit">Enviar</button>
+    <label for="no">
+      <button class="animated-button">NO 😔</button>
+    </label>
+    <button type="submit" class="animated-button">Enviar</button>
   </form>
 
   <div id="response-container"></div>
@@ -60,11 +80,12 @@
           <form>
             <p style="font-size: 24px;">¿Mɪ ᴘʀᴏʏᴇᴄᴛᴏ ᴄᴏᴍᴏ ᴘʀᴏɢʀᴀᴍᴀᴅᴏʀ ᴏ̨ᴜᴇᴅᴏ́ ʙɪᴇɴ? 😼</p>
             <input type="radio" id="si-mate" name="mate" value="si">
-            <label for="si-mate">Si</label>
+            <label for="si-mate">
+              <button class="animated-button">¡SÍ!</button>
+            </label>
             <input type="radio" id="no-mate" name="mate" value="no">
-            <label for="no-mate">No</label>
-            <button type="submit">Enviar</button>
-          </form>
+            <label for="no-mate">
+              <button class
         `;
         document.getElementById("response-container").innerHTML += mateForm;
         const mateFormElement = document.querySelector('form:last-child');

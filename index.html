@@ -4,43 +4,10 @@
   <title>XD INTENTO 200 </title>
   <style>
     body {
-      background-image: linear-gradient(to bottom, #C7E4F7, #87CEEB); /* Gradiente de cielo */
-      background-repeat: no-repeat;
+      background-color: #C7E4F7; /* Celeste pastel */
       text-align: center; /* Centrar texto */
       font-size: 24px; /* Tamaño de fuente uniforme */
       font-family: Arial, sans-serif; /* Fuente Arial */
-    }
-    .cloud {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100px;
-      height: 50px;
-      background-color: #FFFFFF;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    .cloud-left {
-      left: 10%;
-    }
-    .cloud-right {
-      right: 10%;
-    }
-    .animated-button {
-      background-color: #4CAF50;
-      color: #FFFFFF;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .animated-button:hover {
-      background-color: #3e8e41;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    .animated-button:active {
-      background-color: #3e8e41;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     }
   </style>
 </head>
@@ -48,21 +15,13 @@
   <h1 style="font-size: 36px;">¡𝐻𝑜𝑙𝑎𝑎𝑎! ¿𝑄𝑢𝑒́ 𝑡𝑎𝑙 𝑣𝑎 𝑡𝑜𝑑𝑜? 𝐵𝑢𝑒𝑛𝑜, 𝑠𝑒𝑔𝑢𝑖𝑚𝑜𝑠 𝑎𝑑𝑒𝑙𝑎𝑛𝑡𝑒...</h1>
   <form>
     <input type="radio" id="si" name="response" value="si">
-    <label for="si">
-      <button class="animated-button">¡SÍ!</button>
-    </label>
+    <label for="si">Si</label>
     <input type="radio" id="no" name="response" value="no">
-    <label for="no">
-      <button class="animated-button">NO 😔</button>
-    </label>
-    <button type="submit" class="animated-button">Enviar</button>
+    <label for="no">No</label>
+    <button type="submit">Enviar</button>
   </form>
 
   <div id="response-container"></div>
-
-  <!-- Nubes -->
-  <div class="cloud cloud-left"></div>
-  <div class="cloud cloud-right"></div>
 
   <script>
     const form = document.querySelector('form');

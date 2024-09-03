@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTY<!DOCTYPE html>
 <html>
 <head>
   <title>XD INTENTO 200 </title>
@@ -37,38 +37,6 @@
         console.log("Tu nombre es: " + nameInput); // Solo se muestra en la consola del navegador
         const mateForm = `
           <form>
-            <p style="font-size: 24px;">¿Mɪ ᴘʀᴏʏᴇᴄᴛᴏ ᴄᴏᴍᴏ ᴘʀᴏɢʀᴀᴍᴀᴅᴏʀ ᴏ̨ᴜᴇᴅᴏ́ ʙɪᴇɴ? 😼</p>
-            <input type="radio" id="si-mate" name="mate" value="si">
-            <label for="si-mate">
-              <button class="animated-button">¡SÍ!</button>
-    </label>
-    <input type="radio" id="no" name="response" value="no">
-    <label for="no">
-      <button class="animated-button">NO 😔</button>
-    </label>
-    <button type="submit" class="animated-button">Enviar</button>
-  </form>
-
-  <div id="response-container"></div>
-
-  <!-- Nubes -->
-  <div class="cloud cloud-left"></div>
-  <div class="cloud cloud-right"></div>
-
-  <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const response = document.querySelector('input[name="response"]:checked').value;
-      if (response === "no") {
-        document.getElementById("response-container").innerHTML = "gracias por entrar =D";
-      } else {
-        const nameInput = prompt("quien eres?");
-        localStorage.setItem('userName', nameInput); // store the user's name in local storage
-        document.getElementById("response-container").innerHTML = `¡Hola, ${nameInput}!`;
-        console.log("Tu nombre es: " + nameInput); // Solo se muestra en la consola del navegador
-        const mateForm = `
-         <form>
             <p style="font-size: 24px;">¿Mɪ ᴘʀᴏʏᴇᴄᴛᴏ ᴄᴏᴍᴏ ᴘʀᴏɢʀᴀᴍᴀᴅᴏʀ ᴏ̨ᴜᴇᴅᴏ́ ʙɪᴇɴ? 😼</p>
             <input type="radio" id="si-mate" name="mate" value="si">
             <label for="si-mate">Si</label>

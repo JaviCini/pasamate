@@ -4,7 +4,7 @@
   <title>XD INTENTO 200 </title>
   <style>
     body {
-      background-image: linear-gradient(to bottom, #C7E4F7, #87CEEB); /* Gradiente de cielo */
+      background-image: linear-gradient(to bottom, #87CEEB, #C7E4F7); /* Fondo celeste */
       background-repeat: no-repeat;
       text-align: center; /* Centrar texto */
       font-size: 24px; /* Tamaño de fuente uniforme */
@@ -19,12 +19,13 @@
       background-color: #FFFFFF;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: -1; /* Posicionar nubes detrás del texto */
     }
     .cloud-left {
-      left: 10%;
+      left: 5%;
     }
     .cloud-right {
-      right: 10%;
+      right: 5%;
     }
     .animated-button {
       background-color: #4CAF50;
@@ -50,6 +51,38 @@
     <input type="radio" id="si" name="response" value="si">
     <label for="si">
       <button class="animated-button">¡SÍ!</button>
+    </label>
+    <input type="radio" id="no" name="response" value="no">
+    <label for="no">
+      <button class="animated-button">NO 😔</button>
+    </label>
+    <button type="submit" class="animated-button">Enviar</button>
+  </form>
+
+  <div id="response-container"></div>
+
+  <!-- Nubes -->
+  <div class="cloud cloud-left"></div>
+  <div class="cloud cloud-right"></div>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const response = document.querySelector('input[name="response"]:checked').value;
+      if (response === "no") {
+        document.getElementById("response-container").innerHTML = "gracias por entrar =D";
+      } else {
+        const nameInput = prompt("quien eres?");
+        localStorage.setItem('userName', nameInput); // store the user's name in local storage
+        document.getElementById("response-container").innerHTML = `¡Hola, ${nameInput}!`;
+        console.log("Tu nombre es: " + nameInput); // Solo se muestra en la consola del navegador
+        const mateForm = `
+          <form>
+            <p style="font-size: 24px;">¿Mɪ ᴘʀᴏʏᴇᴄᴛᴏ ᴄᴏᴍᴏ ᴘʀᴏɢʀᴀᴍᴀᴅᴏʀ ᴏ̨ᴜᴇᴅᴏ́ ʙɪᴇɴ? 😼</p>
+            <input type="radio" id="si-mate" name="mate" value="si">
+            <label for="si-mate">
+              <button class="animated-button">¡SÍ!</button>
     </label>
     <input type="radio" id="no" name="response" value="no">
     <label for="no">

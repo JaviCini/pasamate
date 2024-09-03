@@ -77,15 +77,14 @@
         document.getElementById("response-container").innerHTML = `¡Hola, ${nameInput}!`;
         console.log("Tu nombre es: " + nameInput); // Solo se muestra en la consola del navegador
         const mateForm = `
-          <form>
+         <form>
             <p style="font-size: 24px;">¿Mɪ ᴘʀᴏʏᴇᴄᴛᴏ ᴄᴏᴍᴏ ᴘʀᴏɢʀᴀᴍᴀᴅᴏʀ ᴏ̨ᴜᴇᴅᴏ́ ʙɪᴇɴ? 😼</p>
             <input type="radio" id="si-mate" name="mate" value="si">
-            <label for="si-mate">
-              <button class="animated-button">¡SÍ!</button>
-            </label>
+            <label for="si-mate">Si</label>
             <input type="radio" id="no-mate" name="mate" value="no">
-            <label for="no-mate">
-              <button class
+            <label for="no-mate">No</label>
+            <button type="submit">Enviar</button>
+          </form>
         `;
         document.getElementById("response-container").innerHTML += mateForm;
         const mateFormElement = document.querySelector('form:last-child');
